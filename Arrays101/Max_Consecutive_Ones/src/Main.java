@@ -1,3 +1,13 @@
+// ===============================================================
+// Attached: Sol2
+// ===============================================================
+// File: Main.java
+// ===============================================================
+// Programmer: Ignacio-Manuel Atilano
+// ===============================================================
+
+import kotlin.ParameterName;
+
 public class Main
 {
     public static void main(String[] args)
@@ -8,6 +18,11 @@ public class Main
         System.out.println("Temp array no. of even digits: " + findNo(tempArray2));
     }
 
+    /**
+     *
+     * @param nums
+     * @return number of even digits values in nums
+     */
     public static int findNo(int[] nums)
     {
         int counter = 0;
