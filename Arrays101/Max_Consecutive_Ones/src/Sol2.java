@@ -18,7 +18,7 @@ public class Sol2
 
     /**
      * The findNo() method examines an integer array and determines what elements
-     * hold values that have an even digit value e.g. 10, 1000, etc.
+     * hold values that have an even digit value e.g, 10, 1000, etc.
      * @param nums
      * @return number of even digits values in nums
      */
