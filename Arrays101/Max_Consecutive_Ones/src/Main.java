@@ -1,10 +1,9 @@
-// ===============================================================
-// Attached: Sol2
-// ===============================================================
-// File: Main.java
-// ===============================================================
-// Programmer: Ignacio-Manuel Atilano
-// ===============================================================
+/**
+ * Summary:examines an integer array and determines what elements
+ *  hold values that have an even digit value e.g, 10, 1000, etc.
+ * @author Ignacio-Manuel Atilanno
+ *
+ */
 
 import kotlin.ParameterName;
 
