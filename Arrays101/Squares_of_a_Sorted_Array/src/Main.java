@@ -5,46 +5,47 @@ public class Main
 {
     public static void main(String [] args)
     {
+        int [] tempArr = {-4,-1,0,3,10};
+        System.out.println("Before sort");
+        printArray(tempArr);
+        System.out.println("After sort");
+        sortedSquares(tempArr);
+        printArray(tempArr);
 
     }
 
-    public static int[] sortedSquares(int[] nums)
+    public static void sortedSquares(int[] nums)
     {
         for(int x = 0; x < nums.length; ++x)
         {
-
             nums[x] = nums[x] * nums[x];
         }
         sortArray(nums);
-        return nums;
+        //return nums;
+        //return Arrays.stream(nums).boxed().sorted().mapToInt(Integer::intValue).toArray();
     }
 
-    public static int[] sortArray(int[] nums)
+    public static void sortArray(int[] nums)
     {
         //int [] sortedArrays = Arrays.stream(nums).boxed().sorted().mapToInt(Integer::intValue).toArray();
 
-        for(int x = 0; x < nums.length - 1; ++x)
+        for(int x = 1; x < nums.length; ++x)
         {
-            int currentMin = nums[x];
-            int currentMinIndex = x;
-
-            for(int y = 0; y < nums.length; ++y)
+            int current = nums[x];
+            int y = x - 1;    // previous item
+            // shift items right
+            while(y >= 0 && nums[y] > current)
             {
-                if(currentMin > nums[y])
-                {
-                    currentMin = nums[y];
-                    currentMinIndex = y;
-                }
+                nums[y + 1] = nums[y];
+                y--;
             }
-            //Swap nums[x] with nums[currentMinIndex]
-            if(currentMinIndex != x)
-            {
-                nums[currentMinIndex] = nums[x];
-                nums[x] = currentMin;
-            }
-
+            nums[y+1] = current;
         }
+    }
 
-        return nums;
+    public static void printArray(int[] nums)
+    {
+        for(int e : nums)
+            System.out.print(e + " ");
     }
 }
